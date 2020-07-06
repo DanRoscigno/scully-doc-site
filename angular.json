@@ -127,6 +127,6 @@
   },
   "defaultProject": "doc-site",
   "cli": {
-    "analytics": "bc31bcc6-cd3b-4e46-98b9-71793147ebf6"
+    "analytics": false
   }
 }

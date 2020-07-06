@@ -1,11 +1,11 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {ScullyLibModule} from '@scullyio/ng-lib';
-import {BlogRoutingModule} from './blog-routing.module';
-import {BlogComponent} from './blog.component';
+import {DocsRoutingModule} from './docs-routing.module';
+import {DocsComponent} from './docs.component';
 
 @NgModule({
-  declarations: [BlogComponent],
-  imports: [CommonModule, BlogRoutingModule, ScullyLibModule],
+  declarations: [DocsComponent],
+  imports: [CommonModule, DocsRoutingModule, ScullyLibModule],
 })
-export class BlogModule {}
+export class DocsModule {}
