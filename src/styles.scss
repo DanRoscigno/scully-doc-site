@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-.body__base {
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
+.body {
+  &__innerWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.9fr 1.1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2.7fr 0.7fr;
+    gap: 1px 1px;
+    grid-template-areas: "header header header header header header" "sidenav sidenav main main main main" "footer footer footer footer footer footer";
+  }
 }
+
+.header { grid-area: header; }
+
+.footer { grid-area: footer; }
+
+.sidenav { grid-area: sidenav; }
+
+.main { grid-area: main; }
