@@ -1,7 +1,8 @@
 ---
-title: Test Gist
+title: 3. Lesson 3
 description: blog description
 published: true
+slug: lesson-three
 ---
 
 # Test Gist
