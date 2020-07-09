@@ -16,12 +16,15 @@ p {
 }
 
 .body {
+  &__base {
+    max-width: 100%;
+  }
   &__innerWrapper {
     display: grid;
-    grid-template-columns: 300px 1.6fr;
-    grid-template-rows: 0.2fr 2.3fr 0.5fr;
+    grid-template-columns: 300px 80vw;
+    grid-template-rows: 1fr ;
     gap: 1px 20px;
-    grid-template-areas: "header header" "sidenav main" "footer footer";
+    grid-template-areas: "sidenav main";
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(67, 66, 66);
     position: relative;
@@ -29,15 +32,16 @@ p {
     height: 100%;
     bottom: 0;
     position: absolute;
+    top: 50px;
 
     @media (min-width: 700px) {
       margin-left: 0;
+      grid-template-columns: 300px 70vw;
     }
   }
 }
 
 .header { 
-  grid-area: header;
 
   &__base {
     height: 50px;
@@ -74,7 +78,6 @@ p {
       font-size: 40px;
       width: 40px;
       height: 40px;
-      top: 60px;
       left: 254px;
 
       @media (min-width: 700px) {
@@ -102,18 +105,6 @@ p {
 
 .component {
   padding: 20px;
-}
-
-.footer { 
-  grid-area: footer; 
-
-  &__base {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgb(246, 248, 249);
-  }
 }
 
 .sidenav { grid-area: sidenav; }
