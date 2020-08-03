@@ -1,7 +1,4 @@
 import { ScullyConfig } from '@scullyio/scully';
-const { DisableAngular } = require('scully-plugin-disable-angular');
-
-const postRenderers = [DisableAngular];
 
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -13,7 +10,6 @@ export const config: ScullyConfig = {
       slug: {
         folder: './docs'
       },
-      postRenderers: postRenderers, 
-    },
+    }
   }
 };
