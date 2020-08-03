@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import './shared/reset';
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-solarizedlight';
 
-// markdown styles
+// markdown generated
+h1[id*='lecci'] {
+  background-color: rgb(233, 235, 236) !important;
+} 
+
 p {
-  padding: 30px 0;
+  padding: 20px 0;
+}
+
+ol {
+  list-style: none;
 }
 
 .logo {
@@ -32,9 +43,9 @@ p {
     height: 100%;
     bottom: 0;
     position: absolute;
-    top: 50px;
+    top: 60px;
 
-    @media (min-width: 700px) {
+    @media (min-width: 800px) {
       margin-left: 0;
       grid-template-columns: 300px 70vw;
     }
@@ -62,7 +73,7 @@ p {
     width: 70px;
     height: 40px;
 
-    @media (min-width: 700px) {
+    @media (min-width: 800px) {
       display: none;
       visibility: hidden;
     }
@@ -80,7 +91,7 @@ p {
       height: 40px;
       left: 254px;
 
-      @media (min-width: 700px) {
+      @media (min-width: 800px) {
         display: none;
         visibility: hidden;
       }
@@ -117,7 +128,6 @@ p {
   }
 }
 
-h1,
 h2 {
   font-size: 26px;
 }

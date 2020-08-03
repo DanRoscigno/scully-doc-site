@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
+import { Component, OnInit, ViewEncapsulation, AfterViewChecked } from '@angular/core';
+import { ActivatedRoute, Router, ROUTES } from '@angular/router';
+import { HighlightService } from '../services/highlight.service';
 
 declare var ng: any;
 
@@ -11,9 +12,19 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class DocsComponent implements OnInit {
+export class DocsComponent implements OnInit, AfterViewChecked {
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private highlightService: HighlightService
+    ) {
+  }
+
   ngOnInit() {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  ngAfterViewChecked() {
+    this.highlightService.highlightAll();
   }
+
 }
